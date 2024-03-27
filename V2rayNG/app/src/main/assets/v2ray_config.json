@@ -99,7 +99,21 @@
       "rules": []
   },
   "dns": {
-      "hosts": {},
-      "servers": []
+    "disableFallbackIfMatch": true,
+    "host": {},
+    "servers": [
+      {
+        "address": "https://1.0.0 .1/dns-query",
+        "concurrent": true
+      },
+      {
+        "address": "localhost",
+        "concurrent": true,
+        "domains": [
+          "full:quiz.vidio.com"
+        ],
+        "skipFallback": true
+      }
+    ]
   }
 }
